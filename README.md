@@ -16,5 +16,5 @@ execute
 - `./launch_ec2.py` Will attempt to launch into a default VPC if present.
 - An optional subnet can be specified with `-s <subnetid>`.
 - By default the script expects a yaml file in the current directory named `config.yml`. One can optionally be specified with `-c <yaml file path>`
-- If everything goes as planned you should be able to login as any of the users specified in the config using your private keys.
+- You may then login as the users specified in the config using your private keys. You may need to adjust the security group attached to the instance to allow ssh access on port 22.
 - `deactivate` 
