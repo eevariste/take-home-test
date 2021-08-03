@@ -1,0 +1,22 @@
+server:
+    instance_type: t2.micro
+    ami_type: amzn2
+    architecture: x86_64
+    root_device_type: ebs 
+    virtualization_type: hvm 
+    min_count: 1
+    max_count: 1
+    volumes:
+        - device: /dev/xvda
+          size_gb: 10
+          type: xfs 
+          mount: /
+        - device: /dev/xvdf
+          size_gb: 100 
+          type: xfs 
+          mount: /data
+    users:
+        - login: user1
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDy9U5M4COXBAoebj4qbr/8VleXZwqMv9T4Rqyt2h9ENztzN6dEISt/iF9/iXvEZEfWPSUp8KEbHR4fx27mWGCAcq9GfwEnwLfWYcXjfwOl7vBn3+ApsC6d9p50wVljymjZB31EbNo0CybtCH3OKTQ3adxk+7LQaORGD0O83d6NmZBVEtrqMkcV7HCV80d+7VngSq7FV3e0paMbxECb/TxPuH5N5uMtsSPtdpKqvLMxCVh5YFsroVdkHPe7LXdoU8RcviSBfaW+zO3bBCNqp2DhEJm1jXDjnoli51teS85BX7BMhXmBJKVMobtdhpodGZmQAJc+OtY3qgdAgH4DNVj7
+        - login: user2
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDy9U5M4COXBAoebj4qbr/8VleXZwqMv9T4Rqyt2h9ENztzN6dEISt/iF9/iXvEZEfWPSUp8KEbHR4fx27mWGCAcq9GfwEnwLfWYcXjfwOl7vBn3+ApsC6d9p50wVljymjZB31EbNo0CybtCH3OKTQ3adxk+7LQaORGD0O83d6NmZBVEtrqMkcV7HCV80d+7VngSq7FV3e0paMbxECb/TxPuH5N5uMtsSPtdpKqvLMxCVh5YFsroVdkHPe7LXdoU8RcviSBfaW+zO3bBCNqp2DhEJm1jXDjnoli51teS85BX7BMhXmBJKVMobtdhpodGZmQAJc+OtY3qgdAgH4DNVj7
